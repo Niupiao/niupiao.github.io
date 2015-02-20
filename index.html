@@ -8,11 +8,20 @@
 Currently, DigitalOcean is hosting our Rails server. 
 For details on how we deployed Rails, refer to <a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-passenger-and-apache-on-ubuntu-14-04">this guide</a>.
 
-For setting up Postgres, refer to <a href="http://stackoverflow.com/questions/1471571/how-to-configure-postgresql-for-the-first-time">this Stack Overflow answer</a>.
+<h3>Frequently upgrade</h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">sudo apt-get update <span style="color: #ce5c00; font-weight: bold">&amp;&amp;</span> sudo apt-get upgrade
+sudo rm /usr/bin/ruby
+sudo ln -s /usr/local/bin/ruby /usr/bin/ruby
+</pre></div>
+
+
 
 <h2>PostgreSQL</h2>
-This <a href="https://www.digitalocean.com/community/tutorials/scaling-ruby-on-rails-setting-up-a-dedicated-postgresql-server-part-3">guide</a> is helpful.
+For setting up Postgres, refer to <a href="http://stackoverflow.com/questions/1471571/how-to-configure-postgresql-for-the-first-time">this Stack Overflow answer</a>.
 
+This <a href="https://www.digitalocean.com/community/tutorials/scaling-ruby-on-rails-setting-up-a-dedicated-postgresql-server-part-3">guide</a> is also helpful.
+
+<h3>Createing Roles and Databases</h3>
 <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic"># Login to PostgreSQL</span>
 sudo -u postgres psql
 
