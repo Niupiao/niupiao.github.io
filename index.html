@@ -63,3 +63,10 @@ fixing permissions on existing directory /usr/local/var/postgres ... initdb: cou
 
 So I then ran: sudo apt-get install postgres-xc postgres-xc-client
 
+I tried to pg_ctl again, but got an error: pg_ctl: Coordinator or Datanode option not specified (-Z)
+
+This just means we need to make a data node.
+
+Run:
+sudo mkdir -p /usr/local/pgsql/data3
+initdb -D /usr/local/pgsql/data3 --nodename data_node_3
