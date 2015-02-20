@@ -1,7 +1,21 @@
 <h1>Developer's Guide</h1>
 
+<h2>DigitalOcean</h2>
+Currently, DigitalOcean is hosting our Rails server. 
+For details on how we deployed Rails, refer to <a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-passenger-and-apache-on-ubuntu-14-04">this guide</a>.
+
 <h2>Git Guide</h2>
 
+<h3>Branches</h3>
+
+Branches come in the following forms:
+<ul>
+<li><b>master</b>: has stable versions of the repository</li>
+<li><b>staging</b>: has unstable changes</li>
+<li><b>feature/<i>developer-name</i>/<i>feature-name</i>: holds the feature that a particular developer is responsible.
+</ul>
+
+<h3>Example: Creating a feature branch</h3>
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># have feature branches be off of &quot;staging&quot; </span>
 git checkout staging
 
