@@ -41,3 +41,7 @@ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 </pre></div>
 
 If the <b>initdb</b> command is not found, refer to <a href="http://dba.stackexchange.com/questions/61850/after-installing-postgresql-and-postgres-xc-with-apt-get-i-have-psql-but-not-po">this StackOverflow answer</a>. For PostgreSQL 9.3, the command was found in: /usr/lib/postgresql/9.3/bin/initdb
+
+We also had to create the directory that holds the database cluster:
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">sudo -p mkdir /usr/local/var/postgres
+</pre></div>
