@@ -21,7 +21,7 @@ For setting up Postgres, refer to <a href="http://stackoverflow.com/questions/14
 
 This <a href="https://www.digitalocean.com/community/tutorials/scaling-ruby-on-rails-setting-up-a-dedicated-postgresql-server-part-3">guide</a> is also helpful.
 
-<h3>Createing Roles and Databases</h3>
+<h3>Creating Roles and Databases</h3>
 <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic"># Login to PostgreSQL</span>
 sudo -u postgres psql
 
@@ -33,3 +33,11 @@ CREATE USER rails_myapp_user WITH PASSWORD <span style="color: #4e9a06">&#39;pwd
 <span style="color: #8f5902; font-style: italic"># Example:</span>
 CREATE DATABASE rails_myapp OWNER rails_myapp_user;
 </pre></div>
+
+<h3>Database Clusters and Starting PostgreSQL!</h3>
+
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">initdb /usr/local/var/postgres
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+</pre></div>
+
+If the <b>initdb</b> command is not found, refer to <a href="http://dba.stackexchange.com/questions/61850/after-installing-postgresql-and-postgres-xc-with-apt-get-i-have-psql-but-not-po">this StackOverflow answer</a>. For PostgreSQL 9.3, the command was found in: /usr/lib/postgresql/9.3/bin/initdb
