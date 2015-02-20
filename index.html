@@ -10,3 +10,17 @@ For details on how we deployed Rails, refer to <a href="https://www.digitalocean
 
 For setting up Postgres, refer to <a href="http://stackoverflow.com/questions/1471571/how-to-configure-postgresql-for-the-first-time">this Stack Overflow answer</a>.
 
+<h2>PostgreSQL</h2>
+This <a href="https://www.digitalocean.com/community/tutorials/scaling-ruby-on-rails-setting-up-a-dedicated-postgresql-server-part-3">guide</a> is helpful.
+
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #8f5902; font-style: italic"># Login to PostgreSQL</span>
+sudo -u postgres psql
+
+<span style="color: #8f5902; font-style: italic"># Usage: CREATE USER [user name] WITH PASSWORD &#39;[password]&#39;;</span>
+<span style="color: #8f5902; font-style: italic"># Example:</span>
+CREATE USER rails_myapp_user WITH PASSWORD <span style="color: #4e9a06">&#39;pwd&#39;</span>;
+
+<span style="color: #8f5902; font-style: italic"># Usage: CREATE DATABASE [database name] OWNER [user name];</span>
+<span style="color: #8f5902; font-style: italic"># Example:</span>
+CREATE DATABASE rails_myapp OWNER rails_myapp_user;
+</pre></div>
